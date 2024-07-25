@@ -11,39 +11,59 @@
     />
     <title>Maldives</title>
     <style>
-      body {
-        background-image: url(https://images.unsplash.com/photo-1622779536320-bb5f5b501a06?q=80&w=3269&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+      .parallax {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
 
         background-attachment: fixed;
 
-        height: 2500px;
+        height: 100vh;
+        overflow: auto;
         margin: 0;
         padding: 0;
       }
-
       .container {
+        max-width: 100%;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .hero {
         text-align: center;
         background-color: transparent;
-        height: 1000px;
         margin-top: 250px;
-        padding: 20px;
-        color: #fff;
+        padding: 20px 0;
+        color: black;
+      }
+      .parallax:first-of-type {
+        background-image: url(./maldives-background.avif);
+      }
+
+      .parallax:nth-of-type(2) {
+        background-image: url(./maldives.webp);
       }
       h1 {
         font-size: 86px;
-        color: #fff;
       }
       h2 {
         font-size: 44px;
-        color: #fff;
       }
       h3 {
         text-align: center;
         font-size: 28px;
         font-weight: 400;
+      }
+      .about {
+        background-color: #fff;
+        color: gray;
+        margin-top: 270px;
+        text-align: center;
+        padding: 60px 280px;
+        font-size: 18px;
+      }
+      .beaches {
+        background-color: #fff;
       }
       nav {
         padding: 5px 5%;
@@ -165,80 +185,97 @@
       .menubar ul li a:hover {
         background-color: #f5f5f5;
       }
-      @media screen and (max-width: 790px) {
+
+      @media screen and (max-width: 768px) {
         .hamburger {
           display: block;
         }
         nav ul {
           display: none;
         }
+        .about {
+          padding: 30px;
+        }
       }
     </style>
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="logo">
-          <img src="assets/Logo64x64.png" alt="logo" />
-          <h1>LOGO</h1>
+    <div class="parallax">
+      <header>
+        <nav>
+          <div class="logo">
+            <img src="assets/Logo64x64.png" alt="logo" />
+            <h1>LOGO</h1>
+          </div>
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+        </nav>
+        <div class="menubar">
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
         </div>
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">Services</a>
-          </li>
-          <li>
-            <a href="#">Blog</a>
-          </li>
-          <li>
-            <a href="#">Contact Us</a>
-          </li>
-        </ul>
-        <div class="hamburger">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
+      </header>
+      <div class="container mx-0">
+        <div class="hero">
+          <h2>Discover</h2>
+          <h1>Maldives</h1>
+          <h3>
+            One of the most serene, romantic, and wildly scenic destinations in
+            the world.
+          </h3>
         </div>
-      </nav>
-      <div class="menubar">
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">Services</a>
-          </li>
-          <li>
-            <a href="#">Blog</a>
-          </li>
-          <li>
-            <a href="#">Contact Us</a>
-          </li>
-        </ul>
+        <p class="about">
+          A chain of 1,192 islands in the Indian Ocean, the Maldives are
+          clustered into atolls, based on their proximity to coral reefs, and
+          are surrounded by azure-colored lagoons. These still waters lend
+          themselves to those dreamy overwater bungalows that have become
+          synonymous with the archipelago, while the coral reefs make it a
+          sought-after snorkeling destination. Of course, many visitors to this
+          idyllic vacation spot will be content to luxuriate on the islands'
+          pristine stretches of fine white sand. With that in mind, these are
+          the 15 best beaches in the Maldives.
+        </p>
+        <div class="container beaches mx-0"></div>
+        <h2>The most beautiful beaches</h2>
+        <div class="row">
+          <div class="col-sm-4"><img src="./2.webp" class="img-fluid" /></div>
+          <div class="col-sm-4"><img src="./3.webp" class="img-fluid" /></div>
+          <div class="col-sm-4">
+            <img src="./baros-island.webp" class="img-fluid" />
+          </div>
+        </div>
       </div>
-    </header>
-    <div class="container">
-      <div class="hero">
-        <h2>Discover</h2>
-        <h1>Maldives</h1>
-        <h3>
-          One of the most serene, romantic, and wildly scenic destinations in
-          the world.
-        </h3>
-      </div>
-      <p>
-        A chain of 1,192 islands in the Indian Ocean, the Maldives are clustered
-        into atolls, based on their proximity to coral reefs, and are surrounded
-        by azure-colored lagoons. These still waters lend themselves to those
-        dreamy overwater bungalows that have become synonymous with the
-        archipelago, while the coral reefs make it a sought-after snorkeling
-        destination. Of course, many visitors to this idyllic vacation spot will
-        be content to luxuriate on the islands' pristine stretches of fine white
-        sand. With that in mind, these are the 15 best beaches in the Maldives.
-      </p>
     </div>
+    <div class="parallax"></div>
   </body>
   <script>
     const mobileNav = document.querySelector(".hamburger");

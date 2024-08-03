@@ -9,8 +9,27 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rozha+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rozha+One&family=Sen:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
     <title>Maldives</title>
     <style>
+      :root {
+        --primary-color: #000;
+        --background-color: rgba(255, 255, 255, 0.7);
+        --background-color-2: #fff;
+        --heading-font: "Rozha One", serif;
+        --main-font: "Sen", sans-serif;
+      }
       body {
         margin: 0;
       }
@@ -34,35 +53,49 @@
         text-align: center;
         padding-right: 0;
         padding-left: 0;
+        font-family: "Sen", sans-serif;
+        font-weight: 300;
+        color: var(--primary-color);
       }
       .hero {
         text-align: center;
         background-color: transparent;
         margin-top: 250px;
         padding: 20px 0;
-        color: #fff;
       }
       .parallax:first-of-type {
-        background-image: url(./maldives-background.avif);
+        background-image: url(./background.jpg);
       }
 
       .parallax:nth-of-type(2) {
-        background-image: url(./maldives.webp);
+        background-image: url(./background-2.jpg);
       }
       h1 {
         font-size: 86px;
+        font-family: var(--heading-font);
       }
       h2 {
         font-size: 44px;
+        font-family: var(--heading-font);
       }
       h3 {
         text-align: center;
         font-size: 28px;
         font-weight: 400;
       }
+
+      button {
+        background-color: transparent;
+        margin-top: 60px;
+        border: 1px #000 solid;
+        padding: 10px 30px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+      }
+      button:hover {
+        background-color: var(--background-color);
+      }
       .about {
-        background-color: #fff;
-        color: #515151;
+        background-color: var(--background-color-2);
         margin-top: 270px;
         margin-bottom: 0;
         text-align: center;
@@ -73,7 +106,6 @@
       }
       .beaches {
         background-color: #fff;
-        color: #515151;
       }
       nav {
         padding: 5px 5%;
@@ -82,10 +114,10 @@
         justify-content: space-between;
         width: 100%;
         align-items: right;
-        color: black;
+        color: var(--primary-color);
         position: fixed;
         top: 0;
-        background-color: #fff;
+        background-color: var(--background-color);
       }
       nav .logo {
         display: flex;
@@ -201,15 +233,21 @@
       }
       .experiences {
         background-color: rgba(255, 255, 255, 0.7);
+        font-family: var(--main-font);
       }
       .experiences-item {
-        background-color: #fff;
+        background-color: var(--background-color);
         margin: 10px;
         padding: 15px;
+        border-radius: 2px;
       }
       .image-caption h4 {
         text-align: center;
         margin-top: 20px;
+      }
+      .experiences img {
+        height: 300px;
+        border-radius: 2px;
       }
       .gallery-1 {
         display: grid;
@@ -223,7 +261,7 @@
         object-position: center;
       }
       .container-2 h3 {
-        background-color: #fff;
+        background-color: var(--background-color-2);
       }
       .gallery {
         display: grid;
@@ -233,7 +271,6 @@
         width: 100%;
         margin: 0;
         padding: 0;
-        background-color: #fff;
       }
 
       .gallery img {
@@ -247,7 +284,7 @@
         background-color: transparent;
       }
       footer {
-        background-color: #fff;
+        background-color: var(--background-color-2);
         height: 200px;
       }
       @media screen and (max-width: 768px) {
@@ -330,7 +367,6 @@
             islands' pristine stretches of fine white sand. With that in mind,
             these are the 15 best beaches in the Maldives.
           </p>
-          <button>Read More</button>
         </div>
       </div>
       <div class="experiences">
@@ -339,7 +375,7 @@
           <div class="experiences-item">
             <img src="tortoise.jpg" alt="Image 1" />
             <div class="image-caption">
-              <h4 class="text-uppercase mt-2">Snorkling</h4>
+              <h4 class="text-uppercase mt-4">Snorkling</h4>
               <p class="text-start p-4">
                 The Maldives are one of the best places in the world to go
                 snorkelling. Below the surface, meanwhile, there are over 1,000
@@ -353,7 +389,7 @@
           <div class="experiences-item">
             <img src="scuba-diving.jpg" alt="Image 1" />
             <div class="image-caption">
-              <h4 class="text-uppercase mt-2">Scuba Diving</h4>
+              <h4 class="text-uppercase mt-4">Scuba Diving</h4>
               <p class="text-start p-4">
                 Descend into the realm of the coral reefs, exploring intricate
                 passageways and towering pinnacles adorned with delicate corals.
@@ -368,7 +404,7 @@
               <img src="villas.jpg" alt="Image 2" />
             </div>
             <div class="image-caption">
-              <h4 class="text-uppercase mt-2">
+              <h4 class="text-uppercase mt-4">
                 Staying IN AN OVER WATER VILLA
               </h4>
               <p class="text-start p-4">
@@ -383,7 +419,7 @@
           <div class="experiences-item">
             <img src="villas.jpg" alt="Image 2" />
             <div class="image-caption">
-              <h4 class="text-uppercase mt-2">Island hopping</h4>
+              <h4 class="text-uppercase mt-4">Island hopping</h4>
               <p class="text-start p-4">
                 Each island in the Maldives is a microcosm of nature’s wonders,
                 culture, and charm, waiting to be explored. Each island
@@ -405,6 +441,8 @@
           <img src="2.webp" alt="Image 1" />
           <img src="3.webp" alt="Image 2" />
           <img src="cocoa-island.jpg" alt="Image 3" />
+          <img src="boat.jpg" alt="Image 3" />
+          <img src="palms.webp" alt="Image 2" />
         </div>
         <div class="buffer"></div>
         <footer>©2024 developed by Yulia Hrinenko</footer>

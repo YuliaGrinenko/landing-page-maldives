@@ -115,7 +115,7 @@
         color: var(--primary-color);
         position: fixed;
         top: 0;
-        background-color: var(--background-color);
+        background-color: var(--background-color-2);
       }
       nav .logo {
         display: flex;
@@ -151,7 +151,6 @@
       }
 
       nav ul li a:hover {
-        background-color: #f5f5f5;
       }
 
       .hamburger {
@@ -200,7 +199,7 @@
         width: 60%;
         height: 100vh;
         padding: 20% 0;
-        background: rgba(255, 255, 255);
+        background: var(--background-color-2);
         transition: all 0.5s ease-in;
         z-index: 2;
       }
@@ -233,6 +232,7 @@
         font-family: var(--main-font);
         background-color: var(--background-color);
         padding: 0 100px;
+        position: relative;
       }
       .list {
         display: flex;
@@ -246,7 +246,7 @@
         flex-shrink: 0;
         width: 33%;
         height: 600px;
-        background-color: #fff;
+        background-color: var(--background-color-2);
         scroll-snap-align: center;
       }
       .item img {
@@ -263,6 +263,25 @@
       .image-caption h4 {
         text-align: center;
         margin-top: 20px;
+      }
+      .gallery-button {
+        position: absolute;
+        top: 50%;
+
+        width: 3rem;
+        height: 3rem;
+
+        transform: translateY(-50%);
+      }
+
+      .button--previous {
+        left: 1.5rem;
+
+        transform: rotate(180deg);
+      }
+
+      .button--next {
+        right: 1.5rem;
       }
       .gallery-1 {
         display: grid;
@@ -310,6 +329,7 @@
         -ms-transition: all 0.4s ease-in-out;
         width: 100%;
       }
+
       .buffer {
         height: 600px;
         background-color: transparent;
@@ -474,67 +494,22 @@
               </div>
             </li>
           </ul>
+          <button
+            onclick="handleClick('previous')"
+            class="gallery-button button--previous"
+            type="button"
+          >
+            ➜
+          </button>
+          <button
+            onclick="handleClick('next')"
+            class="gallery-button button--next"
+            type="button"
+          >
+            ➜
+          </button>
         </div>
-        <!--
-        <div class="gallery-1 px-3 m-0">
-          <div class="experiences-item">
-            <img src="tortoise.jpg" alt="Image 1" />
-            <div class="image-caption">
-              <h4 class="text-uppercase mt-4">Snorkling</h4>
-              <p class="text-start p-4">
-                The Maldives are one of the best places in the world to go
-                snorkelling. Below the surface, meanwhile, there are over 1,000
-                coral reefs, which are home to even more species of marine life.
-                And if you’re lucky, you might get to swim alongside the likes
-                of dolphins, manta rays and turtles – so it’s a paradise for
-                nature lovers.
-              </p>
-            </div>
-          </div>
-          <div class="experiences-item">
-            <img src="scuba-diving.jpg" alt="Image 1" />
-            <div class="image-caption">
-              <h4 class="text-uppercase mt-4">Scuba Diving</h4>
-              <p class="text-start p-4">
-                Descend into the realm of the coral reefs, exploring intricate
-                passageways and towering pinnacles adorned with delicate corals.
-                Encounter curious reef sharks and elegant eagle rays in their
-                natural habitat. Drift through channels where currents carry you
-                past a profusion of marine life.
-              </p>
-            </div>
-          </div>
-          <div class="experiences-item">
-            <div class="image-container">
-              <img src="villas.jpg" alt="Image 2" />
-            </div>
-            <div class="image-caption">
-              <h4 class="text-uppercase mt-4">
-                Staying IN AN OVER WATER VILLA
-              </h4>
-              <p class="text-start p-4">
-                One of the most unique things to do in Maldives is staying at
-                the overwater bungalow. It is one of the most popular staying
-                places in this amazing island destination. Staying in an
-                overwater bungalow in the Maldives is an ethereal journey into
-                luxury and natural beauty.
-              </p>
-            </div>
-          </div>
-          <div class="experiences-item">
-            <img src="villas.jpg" alt="Image 2" />
-            <div class="image-caption">
-              <h4 class="text-uppercase mt-4">Island hopping</h4>
-              <p class="text-start p-4">
-                Each island in the Maldives is a microcosm of nature’s wonders,
-                culture, and charm, waiting to be explored. Each island
-                possesses its unique character – from tranquil hideaways to
-                bustling hubs of activity – offering a diversity of experiences.
-              </p>
-            </div>
-          </div>
-        </div>
-      --></div>
+      </div>
     </div>
 
     <div class="parallax">
@@ -580,5 +555,19 @@
       mobileNav.classList.toggle("hamburger-active");
     };
     mobileNav.addEventListener("click", () => toggleNav());
+    const list = document.querySelector(".list");
+
+    // We want to know the width of one of the items. We'll use this to decide how many pixels we want our carousel to scroll.
+    const item = document.querySelector(".item");
+    const itemWidth = item.offsetWidth;
+
+    function handleClick(direction) {
+      // Based on the direction we call `scrollBy` with the item width we got earlier
+      if (direction === "previous") {
+        list.scrollBy({ left: -itemWidth, behavior: "smooth" });
+      } else {
+        list.scrollBy({ left: itemWidth, behavior: "smooth" });
+      }
+    }
   </script>
 </html>

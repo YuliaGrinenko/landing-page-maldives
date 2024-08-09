@@ -104,7 +104,7 @@
         line-height: 1.5;
       }
       .parallax:first-of-type {
-        background-image: url(./1-2.jpg);
+        background-image: url(./Background-new.jpg);
       }
 
       .parallax:nth-of-type(2) {
@@ -123,10 +123,9 @@
       }
       .hero h3 {
         font-size: 24px;
-
       }
 
-      button {
+      .hero button {
         background-color: transparent;
         margin-top: 150px;
         border: 2px #fff solid;
@@ -134,7 +133,7 @@
         color: var(--secondary-color);
       }
 
-      button:hover {
+      .hero button:hover {
         background-color: var(--background-color);
         border: none;
         color: var(--primary-color);
@@ -166,10 +165,10 @@
         display: flex;
         align-items: center;
       }
-      nav .logo img {
+      nav .logo .fa-brands {
         height: 50px;
         width: auto;
-        margin-right: 10px;
+        margin-right: 20px;
       }
       nav .logo h1 {
         font-size: 1.1rem;
@@ -279,6 +278,26 @@
         font-family: var(--main-font);
         background-color: var(--background-color);
         padding: 0 100px;
+        position: relative;
+      }
+      .button-gallery {
+        position: absolute;
+        top: 50%;
+
+        width: 3rem;
+        height: 3rem;
+
+        transform: translateY(-50%);
+      }
+
+      .button--previous {
+        left: 1.5rem;
+
+        transform: rotate(180deg);
+      }
+
+      .button--next {
+        right: 1.5rem;
       }
       .list {
         display: flex;
@@ -365,14 +384,38 @@
       }
       footer {
         background-color: var(--background-color-2);
-        height: 200px;
+        margin: 0 30px;
       }
-      @media (max-width: 992px) {
+      .sudo {
+        position: relative;
+        width: 400px;
+        height: 300px;
+        margin: 50px;
+        background-image: url(./1-2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: background-image 0.3s ease-in-out;
+      }
+
+      .sudo:hover {
+        background-image: url(./cocoa-island.jpg);
+      }
+      .fa-brands {
+        color: var(--primary-color);
+        font-size: 22px;
+        margin: 0 10px;
+      }
+      .fa-brands:hover {
+        color: #808080;
+      }
+
+      @media (max-width: 1200px) {
         .about {
           padding: 60px 60px;
         }
         .item {
-          width: 50%;
+          width: 47%;
+        }
       }
       @media (max-width: 768px) {
         .hamburger {
@@ -394,7 +437,7 @@
     <header>
       <nav>
         <div class="logo">
-          <img src="/summer.png" alt="logo" />
+          <i class="fa-solid fa-water"></i>
           <h1>LOGO</h1>
         </div>
         <ul>
@@ -447,14 +490,16 @@
         </div>
         <div class="about">
           <p>
-            A chain of 1,192 islands in the Indian Ocean, the Maldives are
-            clustered into atolls, based on their proximity to coral reefs, and
-            are surrounded by azure-colored lagoons. These still waters lend
-            themselves to those dreamy overwater bungalows that have become
-            synonymous with the archipelago, while the coral reefs make it a
-            sought-after snorkeling destination. Of course, many visitors to
-            this idyllic vacation spot will be content to luxuriate on the
-            islands' pristine stretches of fine white sand.
+            Beaches, lagoons, islands, the places to visit in Maldives can lend
+            you a diverse and most enthralling experience on your holiday. With
+            the splendor of nature and the most charismatic vibes, the island
+            destination in South Asia is the best holiday destination for every
+            vacationer, honeymooner, or traveler. Alluring people with its
+            enchanting beauty of blue and white shores, Maldives is a real
+            paradise that offers every luxury and thrill. Discover the
+            excellence of those exotic water villas or relish the taste of
+            authentic food while you are on a holiday in this land of boundless
+            beauty.
           </p>
         </div>
         <div class="experiences" id="activities">
@@ -466,7 +511,7 @@
               <div class="content">
                 <img src="villas.jpg" />
                 <div class="image-caption">
-                  <h4 class="text-uppercase mt-4">
+                  <h4 class="text-uppercase m-4 mb-0">
                     Staying IN AN OVER WATER VILLA
                   </h4>
                   <p class="text-start p-4">
@@ -484,7 +529,7 @@
               <div class="content">
                 <img src="tortoise.jpg" alt="Image 1" />
                 <div class="image-caption">
-                  <h4 class="text-uppercase mt-4">Snorkling</h4>
+                  <h4 class="text-uppercase mt-4 mb-0">Snorkling</h4>
                   <p class="text-start p-4">
                     The Maldives are one of the best places in the world to go
                     snorkelling. Below the surface, meanwhile, there are over
@@ -501,7 +546,7 @@
               <div class="content">
                 <img src="scuba-diving.jpg" alt="Image 1" />
                 <div class="image-caption">
-                  <h4 class="text-uppercase mt-4">Scuba Diving</h4>
+                  <h4 class="text-uppercase mt-4 mb-0">Scuba Diving</h4>
                   <p class="text-start p-4">
                     Descend into the realm of the coral reefs, exploring
                     intricate passageways and towering pinnacles adorned with
@@ -516,7 +561,7 @@
               <div class="content">
                 <img src="2.webp" alt="Image 2" />
                 <div class="image-caption">
-                  <h4 class="text-uppercase mt-4">Island hopping</h4>
+                  <h4 class="text-uppercase mt-4 mb-0 mb">Island hopping</h4>
                   <p class="text-start p-4">
                     Each island in the Maldives is a microcosm of nature’s
                     wonders, culture, and charm, waiting to be explored. Each
@@ -528,13 +573,26 @@
               </div>
             </li>
           </ul>
+          <button
+            onclick="handleClick('previous')"
+            class="button-gallery button--previous"
+            type="button"
+          >
+            ➜
+          </button>
+          <button
+            onclick="handleClick('next')"
+            class="button-gallery button--next"
+            type="button"
+          >
+            ➜
+          </button>
         </div>
       </div>
     </div>
 
     <div class="parallax">
       <div class="container container-2">
-        <div class="buffer"></div>
         <h3 class="text-uppercase text-center py-5 m-0">Get inspired</h3>
         <div class="gallery" id="gallery">
           <div class="gallery-item">
@@ -562,14 +620,17 @@
             <img src="palms.webp" alt="Image 2" />
           </div>
         </div>
+        <div class="buffer"></div>
       </div>
     </div>
-    <footer id="contacts">
-      <div class="d-flex justify-space-between mb-4">
-        <div>©2024 developed by Yulia Hrinenko</div>
-        <a href="/" title="facebook link" target="_blank">
-          <i class="fa-brands fa-facebook"></i
-        ></a>
+    <footer class="container" id="contacts">
+      <div class="clearfix mx-4 my-5">
+        <div class="float-start">©2024 developed by Yulia Hrinenko</div>
+        <div class="contact-icons float-end">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-youtube"></i>
+        </div>
       </div>
     </footer>
   </body>
@@ -581,6 +642,21 @@
       navbar.classList.toggle("active");
       mobileNav.classList.toggle("hamburger-active");
     };
+
     mobileNav.addEventListener("click", () => toggleNav());
+    const list = document.querySelector(".list");
+
+    // We want to know the width of one of the items. We'll use this to decide how many pixels we want our carousel to scroll.
+    const item = document.querySelector(".item");
+    const itemWidth = item.offsetWidth;
+
+    function handleClick(direction) {
+      // Based on the direction we call `scrollBy` with the item width we got earlier
+      if (direction === "previous") {
+        list.scrollBy({ left: -itemWidth, behavior: "smooth" });
+      } else {
+        list.scrollBy({ left: itemWidth, behavior: "smooth" });
+      }
+    }
   </script>
 </html>

@@ -23,6 +23,9 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playball&family=Rozha+One&family=Sen:wght@400..800&display=swap" rel="stylesheet">
 
     <script
       src="https://kit.fontawesome.com/c474cc9d78.js"
@@ -35,7 +38,7 @@
         --secondary-color: #fff;
         --background-color: rgba(255, 255, 255, 0.8);
         --background-color-2: #fff;
-        --heading-font: "Rozha One", serif;
+        --heading-font: "Playball", cursive;
         --main-font: "Open Sans", sans-serif;
       }
       @keyframes fade-in {
@@ -69,6 +72,34 @@
       .fade-in-element:nth-child(4) {
         animation-delay: 2s;
       }
+    @keyframes revealAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  .reveal {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  @keyframes fadeInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.fade-in-up {
+  animation: 0.75s both fadeInUp;
+}
       body {
         margin: 0;
         font-family: var(--main-font);
@@ -144,7 +175,7 @@
         margin-bottom: 0;
         text-align: center;
         padding: 60px 300px;
-        font-size: 18px;
+        font-size: 20px;
         max-width: 100%;
         width: 100%;
       }
@@ -159,37 +190,30 @@
         position: fixed;
         z-index: 2;
         top: 0;
-        background-color: var(--background-color-2);
-      }
+        background-color: var(--background-color);
+        transition: background-color 0.3s;
+}
+
+nav.scrolled {
+  background-color: #fff;
+}
+  
       nav .logo {
         display: flex;
         align-items: center;
+        font-size: 28px; 
       }
-      nav .logo .fa-brands {
-        height: 50px;
-        width: auto;
-        margin-right: 20px;
-      }
-      nav .logo h1 {
-        font-size: 1.1rem;
-
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
       nav ul {
         list-style: none;
         display: flex;
-        margin-bottom: 0;
-        margin-top: 10px;
+
       }
       nav ul li {
         margin-left: 1.5rem;
       }
       nav ul li a {
         text-decoration: none;
-        color: black;
+        color: var(--primary-color);
         font-size: 95%;
         font-weight: 400;
         padding: 4px 8px;
@@ -278,70 +302,31 @@
         font-family: var(--main-font);
         background-color: var(--background-color);
         padding: 0 100px;
-        position: relative;
-      }
-      .button-gallery {
-        position: absolute;
-        top: 50%;
-
-        width: 3rem;
-        height: 3rem;
-
-        transform: translateY(-50%);
       }
 
-      .button--previous {
-        left: 1.5rem;
-
-        transform: rotate(180deg);
-      }
-
-      .button--next {
-        right: 1.5rem;
-      }
-      .list {
+      .activities-list {
         display: flex;
-        gap: 15px;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
+        flex-wrap: wrap;
+  
+      }
+      
+      .image-container {
+        width: 33%;
         padding: 10px;
-        list-style: none;
+        box-sizing: border-box;
+        opacity: 0;
       }
-
-      .item {
-        flex-shrink: 0;
-        width: 30%;
-        height: auto;
-        background-color: var(--background-color-2);
-        scroll-snap-align: center;
-      }
-      .item img {
-        object-fit: cover;
+ 
+      .image-container img {
         width: 100%;
         height: 300px;
-        border-radius: 2px;
-      }
-      .list .content {
-        align-items: center;
-        justify-content: center;
-        height: 100%;
+        border-radius: 5px;
       }
       .image-caption h4 {
         text-align: center;
-        margin-top: 20px;
+        margin: 20px 0;
       }
 
-      .gallery-1 {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        grid-gap: 25px;
-      }
-
-      .gallery-1 img {
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
-      }
       .container-2 h3 {
         background-color: var(--background-color-2);
       }
@@ -379,7 +364,7 @@
       }
 
       .buffer {
-        height: 600px;
+        height: 400px;
         background-color: transparent;
       }
       footer {
@@ -400,6 +385,10 @@
       .sudo:hover {
         background-image: url(./cocoa-island.jpg);
       }
+      footer{
+        background-color: var(--background-color-2);
+        margin: 0;
+      }
       .fa-brands {
         color: var(--primary-color);
         font-size: 22px;
@@ -413,22 +402,36 @@
         .about {
           padding: 60px 60px;
         }
-        .item {
-          width: 47%;
+        .image-container{
+          width: 50%;
         }
       }
+      @media (max-width: 992px) {
+        .hero h3{
+          margin: auto 30px;
+        }
+        }
       @media (max-width: 768px) {
+        .hero{
+          margin-top: 350px;
+        }
+        .hero h1{
+          font-size: 64px;
+        }  
         .hamburger {
           display: block;
         }
         nav ul {
           display: none;
         }
+        .experiences{
+          padding: 20px;
+        }
+        .image-container{
+          width: 100%;}
+
         .about {
           padding: 30px;
-        }
-        .item {
-          width: 100%;
         }
       }
     </style>
@@ -438,7 +441,6 @@
       <nav>
         <div class="logo">
           <i class="fa-solid fa-water"></i>
-          <h1>LOGO</h1>
         </div>
         <ul>
           <li>
@@ -489,7 +491,7 @@
           <button class="fade-in-element">Let's Go</button>
         </div>
         <div class="about">
-          <p>
+          <p class="ade-in-up-on-scroll">
             Beaches, lagoons, islands, the places to visit in Maldives can lend
             you a diverse and most enthralling experience on your holiday. With
             the splendor of nature and the most charismatic vibes, the island
@@ -504,97 +506,76 @@
         </div>
         <div class="experiences" id="activities">
           <h3 class="text-uppercase text-center py-5">
-            Things to do on Maldives
+            Things to do in the Maldives
           </h3>
-          <ul class="list">
-            <li class="item">
-              <div class="content">
-                <img src="villas.jpg" />
-                <div class="image-caption">
-                  <h4 class="text-uppercase m-4 mb-0">
-                    Staying IN AN OVER WATER VILLA
-                  </h4>
+          <div class="activities-list">
+            <div class="image-container fade-in-up-on-scroll">
+              <img class="image" src="villas.jpg" alt="Villa" />
+              <div class="image-caption">
+                <h4 class="text-uppercase">
+                  Staying IN AN OVER WATER VILLA
+                </h4>
+                <p class="text-start p-4">
+                  Picture the Maldives, and these are probably the first thing that spring to mind. 
+                And while there’s a lot more to holidays here than sitting back and sunbathing, these distinctive rooms are primed for topping up your tan, thanks to a private deck which juts out over the water. 
+              </p>
+              </div>
+            </div>
+          <div class="image-container fade-in-up-on-scroll">
+              <img class="image" src="tortoise.jpg" alt="Snorkling" />
+              <div class="image-caption">
+                <h4 class="text-uppercase">Snorkling</h4>
+                  <p class="text-start p-4">The Maldives are one of the best places in the world to go snorkelling. There are over 1,000 coral reefs, which are home to even more species of marine life. And if you’re lucky, you might get to swim alongside the likes of dolphins, manta rays and turtles – so it’s a paradise for nature lovers.
+  </p>
+</div>
+              </div>
+        <div class="image-container fade-in-up-on-scroll">
+              <img class="image" src="scuba-diving.jpg" alt="Scuba diving" />
+              <div class="image-caption">
+                <h4 class="text-uppercase m-4 mb-0">Scuba diving</h4>
                   <p class="text-start p-4">
-                    One of the most unique things to do in Maldives is staying
-                    at the overwater bungalow. It is one of the most popular
-                    staying places in this amazing island destination. Staying
-                    in an overwater bungalow in the Maldives is an ethereal
-                    journey into luxury and natural beauty.
+                    
                   </p>
                 </div>
               </div>
-            </li>
+             <div class="image-container fade-in-up-on-scroll">
+              <img class="image" src="villas.jpg" alt="Image 1" />
+              <div class="image-caption">
+                <h4 class="text-uppercase">VISIT AN UNINHABITED ISLAND</h4>
+                  <p class="text-start p-4">
+                    There 1,000 of desewerted islands in the Maldives. 
+                    As they’re all tucked away in the immense stretch of the Indian Ocean, they are some of the most pristine retreats on the globe.
+                     If you opt for a day trip, you can spend the day swimming in one of the lagoons, explore the shoreline by foot, or simply roll out your beach towel and take it all in.
 
-            <li class="item">
-              <div class="content">
-                <img src="tortoise.jpg" alt="Image 1" />
-                <div class="image-caption">
-                  <h4 class="text-uppercase mt-4 mb-0">Snorkling</h4>
-                  <p class="text-start p-4">
-                    The Maldives are one of the best places in the world to go
-                    snorkelling. Below the surface, meanwhile, there are over
-                    1,000 coral reefs, which are home to even more species of
-                    marine life. And if you’re lucky, you might get to swim
-                    alongside the likes of dolphins, manta rays and turtles – so
-                    it’s a paradise for nature lovers.
                   </p>
                 </div>
               </div>
-            </li>
-
-            <li class="item">
-              <div class="content">
-                <img src="scuba-diving.jpg" alt="Image 1" />
-                <div class="image-caption">
-                  <h4 class="text-uppercase mt-4 mb-0">Scuba Diving</h4>
+              <div class="image-container fade-in-up-on-scroll">
+              <img class="image" src="villas.jpg" alt="Image 1" />
+              <div class="image-caption">
+                <h4 class="text-uppercase">SURF IT UP</h4>
                   <p class="text-start p-4">
-                    Descend into the realm of the coral reefs, exploring
-                    intricate passageways and towering pinnacles adorned with
-                    delicate corals. Encounter curious reef sharks and elegant
-                    eagle rays in their natural habitat. Drift through channels
-                    where currents carry you past a profusion of marine life.
+                    Thanks to its tropical climate and northerly position in the Indian Ocean, the Maldives is a heaven on earth for surfers. You can catch the very best waves from April to October, when they total around three to eight feet in height.
                   </p>
                 </div>
               </div>
-            </li>
-            <li class="item">
-              <div class="content">
-                <img src="2.webp" alt="Image 2" />
-                <div class="image-caption">
-                  <h4 class="text-uppercase mt-4 mb-0 mb">Island hopping</h4>
+              <div class="image-container fade-in-up-on-scroll">
+              <img class="image" src="villas.jpg" alt="Image 1" />
+              <div class="image-caption">
+                <h4 class="text-uppercase">Island hopping</h4>
                   <p class="text-start p-4">
-                    Each island in the Maldives is a microcosm of nature’s
-                    wonders, culture, and charm, waiting to be explored. Each
-                    island possesses its unique character – from tranquil
-                    hideaways to bustling hubs of activity – offering a
-                    diversity of experiences.
+                     
                   </p>
                 </div>
               </div>
-            </li>
-          </ul>
-          <button
-            onclick="handleClick('previous')"
-            class="button-gallery button--previous"
-            type="button"
-          >
-            ➜
-          </button>
-          <button
-            onclick="handleClick('next')"
-            class="button-gallery button--next"
-            type="button"
-          >
-            ➜
-          </button>
         </div>
       </div>
     </div>
-
+ 
     <div class="parallax">
       <div class="container container-2">
         <h3 class="text-uppercase text-center py-5 m-0">Get inspired</h3>
-        <div class="gallery" id="gallery">
+        <div class="gallery fade-in-up-on-scroll" id="gallery">
           <div class="gallery-item">
             <img src="coral.jpg" alt="Image 1" />
           </div>
@@ -624,7 +605,7 @@
       </div>
     </div>
     <footer class="container" id="contacts">
-      <div class="clearfix mx-4 my-5">
+      <div class="clearfix px-4 py-5">
         <div class="float-start">©2024 developed by Yulia Hrinenko</div>
         <div class="contact-icons float-end">
           <i class="fa-brands fa-facebook-f"></i>
@@ -642,21 +623,25 @@
       navbar.classList.toggle("active");
       mobileNav.classList.toggle("hamburger-active");
     };
-
-    mobileNav.addEventListener("click", () => toggleNav());
-    const list = document.querySelector(".list");
-
-    // We want to know the width of one of the items. We'll use this to decide how many pixels we want our carousel to scroll.
-    const item = document.querySelector(".item");
-    const itemWidth = item.offsetWidth;
-
-    function handleClick(direction) {
-      // Based on the direction we call `scrollBy` with the item width we got earlier
-      if (direction === "previous") {
-        list.scrollBy({ left: -itemWidth, behavior: "smooth" });
+const elementsToFadeInUpOnScroll = document.querySelectorAll(".fade-in-up-on-scroll");
+if (elementsToFadeInUpOnScroll) {
+  window.addEventListener("scroll", function(event) {
+    elementsToFadeInUpOnScroll.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in-up");
       } else {
-        list.scrollBy({ left: itemWidth, behavior: "smooth" });
+        element.classList.remove("fade-in-up");
       }
-    }
+    });
+  });
+}
+window.addEventListener('scroll', function() {
+  var nav = document.querySelector('nav');
+  if (window.scrollY > 0) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
   </script>
 </html>

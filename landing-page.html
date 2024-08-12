@@ -53,8 +53,8 @@
       .fade-in-element {
         opacity: 0;
         animation: fade-in 1s ease-in-out forwards;
-        position: relative; /* Add position: relative */
-        z-index: 1; /* Add z-index */
+        position: relative; 
+        z-index: 1; 
       }
 
       .fade-in-element:nth-child(1) {
@@ -105,123 +105,46 @@
         font-family: var(--main-font);
         font-weight: 400;
       }
-      .parallax {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-        min-height: 100vh;
-        overflow: auto;
-        margin: 0;
-        padding: 0;
-      }
-      .container {
-        max-width: 100%;
-        width: 100%;
-        margin: 0;
-        text-align: center;
-        padding-right: 0;
-        padding-left: 0;
-        font-weight: 400;
-        color: var(--primary-color);
-        line-height: 1.5;
-      }
-      .hero {
-        text-align: center;
-        background-color: transparent;
-        margin-top: 250px;
-        padding: 20px 0;
-        color: var(--secondary-color);
-        line-height: 1.5;
-      }
-      .parallax:first-of-type {
-        background-image: url(./Background-new.jpg);
-      }
-
-      .parallax:nth-of-type(2) {
-        background-image: url(./background.jpg);
-      }
-      .hero h1 {
-        font-size: 120px;
-        font-family: var(--heading-font);
-        text-transform: uppercase;
-      }
-
-      .hero h2 {
-        font-size: 35px;
-        font-family: var(--heading-font);
-        text-transform: uppercase;
-      }
-      .hero h3 {
-        font-size: 24px;
-      }
-
-      .hero button {
-        background-color: transparent;
-        margin-top: 150px;
-        border: 2px #fff solid;
-        padding: 10px 30px;
-        color: var(--secondary-color);
-      }
-
-      .hero button:hover {
-        background-color: var(--background-color);
-        border: none;
-        color: var(--primary-color);
-      }
-      .about {
-        background-color: var(--background-color);
-        margin-top: 200px;
-        margin-bottom: 0;
-        text-align: center;
-        padding: 60px 300px;
-        font-size: 20px;
-        max-width: 100%;
-        width: 100%;
-      }
-
-      nav {
-        padding: 5px 5%;
-        margin-right: 15px;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        color: var(--primary-color);
-        position: fixed;
-        z-index: 2;
-        top: 0;
-        background-color: var(--background-color);
-        transition: background-color 0.3s;
+  nav {
+  padding: 5px 70px;
+  display: flex;
+  justify-content: space-between;
+   width: 100%;
+  color: var(--primary-color);
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  background-color: transparent;
+ transition: background-color 0.3s;
+ 
 }
-
 nav.scrolled {
   background-color: #fff;
 }
   
       nav .logo {
-        display: flex;
-        align-items: center;
-        font-size: 28px; 
+        font-family: var(--heading-font);
+        font-size: 28px;
       }
       nav ul {
         list-style: none;
         display: flex;
-
+        font-family: var(--main-font);
+        align-items: center;
       }
       nav ul li {
         margin-left: 1.5rem;
+      
       }
       nav ul li a {
         text-decoration: none;
         color: var(--primary-color);
-        font-size: 95%;
-        font-weight: 400;
-        padding: 4px 8px;
-        border-radius: 5px;
+ font-size: 16px;
       }
 
       nav ul li a:hover {
-      }
+        color: #808080;
+}
 
       .hamburger {
         display: none;
@@ -272,6 +195,8 @@ nav.scrolled {
         background: var(--background-color-2);
         transition: all 0.5s ease-in;
         z-index: 2;
+         font-family: var(--main-font);
+ font-size: 16px;
       }
       .active {
         left: 0;
@@ -289,61 +214,143 @@ nav.scrolled {
       .menubar ul li a {
         text-decoration: none;
         color: #000;
-        font-size: 95%;
-        font-weight: 400;
         padding: 5px 10px;
-        border-radius: 5px;
       }
 
       .menubar ul li a:hover {
-        background-color: #f5f5f5;
+       color: #808080;
+      }
+      .parallax {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        min-height: 100vh;
+        overflow: auto;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        padding-right: 0;
+        padding-left: 0;
+        font-weight: 400;
+        color: var(--primary-color);
+        line-height: 1.5;
+      }
+      .hero {
+        text-align: center;
+        background-color: transparent;
+        margin-top: 250px;
+        padding: 20px 0;
+        color: var(--secondary-color);
+        line-height: 1.5;
+      }
+      .parallax:first-of-type {
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/138/843/original/background-girl.jpg?1723481162);
+      }
+
+      .parallax:nth-of-type(2) {
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/138/667/original/cocoa-island.jpg?1723447379/3.webp);
+      }
+      .hero h1 {
+        font-size: 120px;
+        font-family: var(--heading-font);
+        text-transform: uppercase;
+      }
+
+      .hero h2 {
+        font-size: 35px;
+        font-family: var(--heading-font);
+        text-transform: uppercase;
+      }
+      .hero h3 {
+        font-size: 24px;
+      }
+
+      .hero button {
+        background-color: transparent;
+        margin-top: 150px;
+        border: 2px #fff solid;
+        padding: 10px 30px;
+        color: var(--secondary-color);
+      }
+
+      .hero button:hover {
+        background-color: var(--background-color-2);
+        color: var(--primary-color);
+        border-color: transparent;        
+      }
+      .about {
+        background-color: var(--background-color);
+        margin-top: 200px;
+        margin-bottom: 0;
+        text-align: center;
+        padding: 60px 300px;
+        font-size: 20px;
+        max-width: 100%;
+        width: 100%;
       }
       .experiences {
         font-family: var(--main-font);
-        background-color: var(--background-color);
         padding: 0 100px;
+        background-color: var(--background-color-2);
       }
 
       .activities-list {
         display: flex;
         flex-wrap: wrap;
-  
-      }
-      
-      .image-container {
-        width: 33%;
+    }
+      .activity-item {
+       width: 33%;
         padding: 10px;
         box-sizing: border-box;
-        opacity: 0;
+
+      }
+      .image-container {
+        overflow: hidden;
       }
  
       .image-container img {
         width: 100%;
         height: 300px;
         border-radius: 5px;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        
       }
       .image-caption h4 {
         text-align: center;
         margin: 20px 0;
       }
-
-      .container-2 h3 {
+.image-container img:hover {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2);
+        max-height: 300px;
+      }
+  .buffer{
+    height: 500px;
+  }
+      .gallery-section{
         background-color: var(--background-color-2);
       }
       .gallery {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        grid-auto-rows: 400px; /* Set a fixed height for each row */
+        grid-auto-rows: 400px; 
         grid-gap: 0px;
         width: 100%;
         margin: 0;
         padding: 0;
-      }
-
-      .gallery img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        background-color: var(--background-color-2);
       }
       .gallery-item {
         width: 100%;
@@ -361,17 +368,11 @@ nav.scrolled {
         -o-transition: all 0.4s ease-in-out;
         -ms-transition: all 0.4s ease-in-out;
         width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
-
-      .buffer {
-        height: 400px;
-        background-color: transparent;
-      }
-      footer {
-        background-color: var(--background-color-2);
-        margin: 0 30px;
-      }
-      .sudo {
+     
+      /*/.sudo {
         position: relative;
         width: 400px;
         height: 300px;
@@ -382,22 +383,84 @@ nav.scrolled {
         transition: background-image 0.3s ease-in-out;
       }
 
-      .sudo:hover {
+      sudo:hover {
         background-image: url(./cocoa-island.jpg);
-      }
+      }*/
       footer{
-        background-color: var(--background-color-2);
-        margin: 0;
+        background-color: var(--background-color);
+        margin: 0 20px;
+        color:#808080;
+        font-family: var(--main-font);
       }
       .fa-brands {
-        color: var(--primary-color);
+        color: var(--secondary-color);
         font-size: 22px;
         margin: 0 10px;
+        width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  border-radius:100%;
+  background-color:#989898;
       }
       .fa-brands:hover {
-        color: #808080;
+        background-color:  #808080;
       }
+      .carousel{ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-carousel {
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: none;
+    transition: all .3s ease-in-out;
+}
 
+.carousel-view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 44px 0;
+  transition: all 0.25s ease-in;
+}
+
+.carousel-view .item-list {
+  max-width: 950px;
+  width: 70vw;
+  padding: 50px 10px;
+  display: flex;
+  gap: 10px;
+  scroll-behavior: smooth;
+  transition: all 0.25s ease-in;
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.item-list::-webkit-scrollbar {
+  display: none;
+}
+
+.prev-btn {
+  background: none;
+  cursor: pointer;
+}
+
+.next-btn {
+  cursor: pointer;
+}
+.item img{
+scroll-snap-align: center;
+  width: 400px;
+  height: 100%;
+  border-radius:4px;
+    object-fit: cover;
+}
       @media (max-width: 1200px) {
         .about {
           padding: 60px 60px;
@@ -412,12 +475,13 @@ nav.scrolled {
         }
         }
       @media (max-width: 768px) {
-        .hero{
-          margin-top: 350px;
-        }
+
         .hero h1{
           font-size: 64px;
         }  
+        nav{
+          padding: 5px 25px;
+        }
         .hamburger {
           display: block;
         }
@@ -440,7 +504,7 @@ nav.scrolled {
     <header>
       <nav>
         <div class="logo">
-          <i class="fa-solid fa-water"></i>
+          <p>Maldives</p>
         </div>
         <ul>
           <li>
@@ -493,10 +557,7 @@ nav.scrolled {
         <div class="about">
           <p class="ade-in-up-on-scroll">
             Beaches, lagoons, islands, the places to visit in Maldives can lend
-            you a diverse and most enthralling experience on your holiday. With
-            the splendor of nature and the most charismatic vibes, the island
-            destination in South Asia is the best holiday destination for every
-            vacationer, honeymooner, or traveler. Alluring people with its
+            you a diverse and most enthralling experience on your holiday. Alluring people with its
             enchanting beauty of blue and white shores, Maldives is a real
             paradise that offers every luxury and thrill. Discover the
             excellence of those exotic water villas or relish the taste of
@@ -504,45 +565,70 @@ nav.scrolled {
             beauty.
           </p>
         </div>
+  <!---<div class="carousel">
+  <div class="carousel-view">
+    <button id="prev-btn" class="button-carousel prev-btn">   <svg viewBox="0 0 512 512" width="20" title="chevron-circle-left">
+  <path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" />
+</svg></button>
+        <div id="item-list" class="item-list">
+          <div class="item"><img id="item" src="2.webp"/></div>
+             <div class="item"> <img id="item" src="1-2.jpg"/></div>
+
+          <div class="item"><img id="item" src="2.webp"/></div>
+             <div class="item"> <img id="item" src="1-2.jpg"/></div>
+        </div>
+     <button id="next-btn" class="button-carousel next-btn"><svg viewBox="0 0 512 512" width="20" title="chevron-circle-right">
+  <path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z" />
+</svg> </button>
+    </div>
+  </div>--->
         <div class="experiences" id="activities">
           <h3 class="text-uppercase text-center py-5">
             Things to do in the Maldives
           </h3>
+
           <div class="activities-list">
-            <div class="image-container fade-in-up-on-scroll">
-              <img class="image" src="villas.jpg" alt="Villa" />
+            <div class="activity-item fade-in-up-on-scroll">
+             <div class="image-container">
+              <img class="image" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/138/669/original/villas.jpg?1723447577" alt="Villa" />
+              </div>
               <div class="image-caption">
                 <h4 class="text-uppercase">
                   Staying IN AN OVER WATER VILLA
                 </h4>
-                <p class="text-start p-4">
+                <p class="text-start">
                   Picture the Maldives, and these are probably the first thing that spring to mind. 
                 And while there’s a lot more to holidays here than sitting back and sunbathing, these distinctive rooms are primed for topping up your tan, thanks to a private deck which juts out over the water. 
               </p>
               </div>
             </div>
-          <div class="image-container fade-in-up-on-scroll">
-              <img class="image" src="tortoise.jpg" alt="Snorkling" />
+          <div class="activity-item fade-in-up-on-scroll">
+              <div class="image-container">
+              <img class="image" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/138/695/original/tortoise.jpg?1723452992" alt="Snorkling" />
+              </div>
               <div class="image-caption">
                 <h4 class="text-uppercase">Snorkling</h4>
-                  <p class="text-start p-4">The Maldives are one of the best places in the world to go snorkelling. There are over 1,000 coral reefs, which are home to even more species of marine life. And if you’re lucky, you might get to swim alongside the likes of dolphins, manta rays and turtles – so it’s a paradise for nature lovers.
+                  <p class="text-start">The Maldives are one of the best places in the world to go snorkelling. There are over 1,000 coral reefs, which are home to even more species of marine life. And if you’re lucky, you might get to swim alongside the likes of dolphins, manta rays and turtles – so it’s a paradise for nature lovers.
   </p>
 </div>
               </div>
-        <div class="image-container fade-in-up-on-scroll">
-              <img class="image" src="scuba-diving.jpg" alt="Scuba diving" />
-              <div class="image-caption">
-                <h4 class="text-uppercase m-4 mb-0">Scuba diving</h4>
-                  <p class="text-start p-4">
-                    
+        <div class="activity-item fade-in-up-on-scroll">
+          <div class="image-container">
+              <img class="image" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/138/670/original/diving.jpg?1723447597" alt="Scuba diving" />
+              </div><div class="image-caption">
+                <h4 class="text-uppercase">Scuba diving</h4>
+                  <p class="text-start">
+                    The Maldives is a low-lying nation with dreamy white sand beaches and excellent reefs with an abundance of marine life. Scuba diving is done at a leisurely drift pace as the Indian monsoon current sweeps along the island chains, moving nutrients and divers along. This rich water flows up along the walls, feeding the soft coral clinging to the rock sides.
+                  
                   </p>
                 </div>
               </div>
-             <div class="image-container fade-in-up-on-scroll">
-              <img class="image" src="villas.jpg" alt="Image 1" />
+             <div class="activity-item fade-in-up-on-scroll">
+              <div class="image-container">
+              <img class="image" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/138/837/original/background.jpg?1723480420" alt="Island" /></div>
               <div class="image-caption">
-                <h4 class="text-uppercase">VISIT AN UNINHABITED ISLAND</h4>
-                  <p class="text-start p-4">
+                <h4 class="text-uppercase">Visiting AN UNINHABITED ISLAND</h4>
+                  <p class="text-start">
                     There 1,000 of desewerted islands in the Maldives. 
                     As they’re all tucked away in the immense stretch of the Indian Ocean, they are some of the most pristine retreats on the globe.
                      If you opt for a day trip, you can spend the day swimming in one of the lagoons, explore the shoreline by foot, or simply roll out your beach towel and take it all in.
@@ -550,21 +636,26 @@ nav.scrolled {
                   </p>
                 </div>
               </div>
-              <div class="image-container fade-in-up-on-scroll">
-              <img class="image" src="villas.jpg" alt="Image 1" />
-              <div class="image-caption">
-                <h4 class="text-uppercase">SURF IT UP</h4>
-                  <p class="text-start p-4">
+               <div class="activity-item fade-in-up-on-scroll">
+                <div class="image-container">
+              <img class="image" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/138/666/original/surf.jpg?1723447364" alt="Surfing" />
+             </div><div class="image-caption">
+                <h4 class="text-uppercase">Surfing</h4>
+                  <p class="text-start">
                     Thanks to its tropical climate and northerly position in the Indian Ocean, the Maldives is a heaven on earth for surfers. You can catch the very best waves from April to October, when they total around three to eight feet in height.
                   </p>
                 </div>
               </div>
-              <div class="image-container fade-in-up-on-scroll">
-              <img class="image" src="villas.jpg" alt="Image 1" />
+              <div class="activity-item fade-in-up-on-scroll">
+                  <div class="image-container">
+              <img class="image" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/138/839/original/seaplane.jpg?1723480472" alt="Seaplane" /></div>
               <div class="image-caption">
-                <h4 class="text-uppercase">Island hopping</h4>
-                  <p class="text-start p-4">
-                     
+                <h4 class="text-uppercase">Flying on a seaplane</h4>
+                  <p class="text-start">
+            What is a seaplane? It's exactly what it sounds like - a plane that takes off from and lands on water. Instead of tyres it has special floats like a boat hull. These planes usually carry up to 15 passengers.
+
+The Maldives has the largest fleet of seaplanes in the world!
+
                   </p>
                 </div>
               </div>
@@ -574,16 +665,18 @@ nav.scrolled {
  
     <div class="parallax">
       <div class="container container-2">
+        <div class="buffer"></div>
+        <div class="gallery-section">
         <h3 class="text-uppercase text-center py-5 m-0">Get inspired</h3>
         <div class="gallery fade-in-up-on-scroll" id="gallery">
           <div class="gallery-item">
-            <img src="coral.jpg" alt="Image 1" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/138/665/original/coral.jpg?1723447352" alt="Fish" />
           </div>
           <div class="gallery-item">
-            <img src="sunset.jpg" alt="Image 2" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/138/696/original/sunset.jpg?1723453005" alt="Image 2" />
           </div>
           <div class="gallery-item">
-            <img src="maldives.webp" alt="Image 2" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/138/672/original/kayak.jpg?1723447645" alt="Kayak" />
           </div>
           <div class="gallery-item">
             <img src="umbrellas.webp" alt="Image 3" />
@@ -595,25 +688,25 @@ nav.scrolled {
             <img src="cocoa-island.jpg" alt="Image 3" />
           </div>
           <div class="gallery-item">
-            <img src="boat.jpg" alt="Image 3" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/138/664/original/boat.jpg?1723447263" alt="Boat" />
           </div>
           <div class="gallery-item">
             <img src="palms.webp" alt="Image 2" />
           </div>
         </div>
-        <div class="buffer"></div>
-      </div>
-    </div>
-    <footer class="container" id="contacts">
-      <div class="clearfix px-4 py-5">
-        <div class="float-start">©2024 developed by Yulia Hrinenko</div>
-        <div class="contact-icons float-end">
+        </div>
+         <footer class="container px-4 py-5" id="contacts">
+        <div class="contact-icons mb-5">
           <i class="fa-brands fa-facebook-f"></i>
           <i class="fa-brands fa-instagram"></i>
           <i class="fa-brands fa-youtube"></i>
         </div>
+        <div class="">©2024 developed by Yulia Hrinenko</div>
       </div>
     </footer>
+      </div>
+    </div>
+   
   </body>
   <script>
     const mobileNav = document.querySelector(".hamburger");
@@ -623,6 +716,8 @@ nav.scrolled {
       navbar.classList.toggle("active");
       mobileNav.classList.toggle("hamburger-active");
     };
+  mobileNav.addEventListener("click", () => toggleNav());
+
 const elementsToFadeInUpOnScroll = document.querySelectorAll(".fade-in-up-on-scroll");
 if (elementsToFadeInUpOnScroll) {
   window.addEventListener("scroll", function(event) {
@@ -643,5 +738,17 @@ window.addEventListener('scroll', function() {
     nav.classList.remove('scrolled');
   }
 });
+const prev = document.getElementById('prev-btn')
+const next = document.getElementById('next-btn')
+const list = document.getElementById('item-list')
+const itemWidth = 150
+const padding = 10
+
+prev.addEventListener('click',()=>{
+  list.scrollLeft -= (itemWidth + padding)
+})
+next.addEventListener('click',()=>{
+  list.scrollLeft += (itemWidth + padding)
+})
   </script>
 </html>

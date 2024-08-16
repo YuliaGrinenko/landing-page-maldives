@@ -99,7 +99,7 @@
   display: flex;
   justify-content: space-between;
    width: 100%;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   position: fixed;
   z-index: 2;
   top: 0;
@@ -108,10 +108,14 @@
  
 }
 nav.scrolled {
-  background-color: #fff;
-  
+  background-color: #fff; 
 }
-  
+  nav.scrolled ul li a{
+    color:var(--primary-color);
+  }
+  nav.scrolled .logo{
+    color:var(--primary-color);
+  }
       nav .logo {
         font-family: var(--heading-font);
         font-size: 28px;
@@ -128,12 +132,12 @@ nav.scrolled {
       }
       nav ul li a {
         text-decoration: none;
-        color: var(--primary-color);
+        color: var(--secondary-color);
  font-size: 16px;
       }
 
       nav ul li a:hover {
-        color: #808080;
+        color: #d2cdcd;
 }
 
       .hamburger {

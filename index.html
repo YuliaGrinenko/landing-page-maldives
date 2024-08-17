@@ -219,7 +219,7 @@ nav.scrolled {
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        min-height: 50vh;
+        min-height: 100vh;
         overflow: auto;
         margin: 0;
         padding: 0;
@@ -241,6 +241,7 @@ nav.scrolled {
         font-weight: 400;
         color: var(--primary-color);
         line-height: 1.5;
+        background-color: transparent;
       }
       .hero {
         text-align: center;
@@ -397,6 +398,11 @@ font-size: 15px;
       .fa-brands:hover {
         background-color:  #808080;
       }
+      @media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
   @media (max-width: 1200px) {
         .about {
           padding: 60px 60px;

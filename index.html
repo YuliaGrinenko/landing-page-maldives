@@ -101,7 +101,12 @@
         font-family: var(--main-font);
         font-weight: 400;
       }
-  nav {
+
+  nav .logo {
+        font-family: var(--heading-font);
+        font-size: 28px;
+      }
+  /*nav {
   padding: 5px 70px;
   display: flex;
   justify-content: space-between;
@@ -220,7 +225,7 @@ nav.scrolled {
 
       .menubar ul li a:hover {
        color: #808080;
-      }
+      }*/
       .parallax {
         background-position: center;
         background-size: cover;
@@ -436,7 +441,7 @@ font-size: 15px;
         .hero h1{
           font-size: 64px;
         }  
-        nav{
+        /*nav{
           padding: 5px 25px;
         }
         .hamburger {
@@ -444,7 +449,7 @@ font-size: 15px;
         }
         nav ul {
           display: none;
-        }
+        }*/
 
         .activities-list{
 padding: 0 20px;
@@ -470,7 +475,61 @@ width: calc(100% - 0px); }
   </head>
   <body>
     <header>
-    <nav>
+      <nav
+      class="navbar fixed-top navbar-expand-lg navbar-light"
+      style="background-color: transparent"
+    >
+      <div class="container-fluid">
+        <a class="logo navbar-brand navbar-font fw-bold" href="/" title="Homepage"
+          >Maldives <span class="laobrige-font"></span
+        ></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNavAltMarkup"
+        >
+          <div class="navbar-nav">
+            <a
+              class="nav-link active navbar-font mx-2"
+              aria-current="page"
+              href="/"
+              title="Home"
+              >Home</a
+            >
+            <a
+              class="nav-link navbar-font mx-2"
+              aria-current="page"
+              href="/#activities"
+              title="work.html"
+              >Work</a
+            >
+            <a
+              class="nav-link navbar-font mx-2"
+              href="/#gallery"
+              title="About"
+              >About</a
+            >
+            <a
+              class="nav-link navbar-font mx-2"
+              href="/#contacts"
+              title="Contact"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--<nav>
         <div class="logo">
           <p>Maldives</p>
         </div>
@@ -509,7 +568,7 @@ width: calc(100% - 0px); }
             <a href="/#contacts">Contact</a>
           </li>
         </ul>
-      </div>
+      </div>-->
     </header>
     <div class="parallax">
       <div class="container mx-0">
@@ -662,14 +721,14 @@ The Maldives has the largest fleet of seaplanes in the world!
     </div>
   </body>
   <script>
-    const mobileNav = document.querySelector(".hamburger");
-    const navbar = document.querySelector(".menubar");
+    //const mobileNav = document.querySelector(".hamburger");
+    //const navbar = document.querySelector(".menubar");
 
-    const toggleNav = () => {
-      navbar.classList.toggle("active");
-      mobileNav.classList.toggle("hamburger-active");
-    };
-  mobileNav.addEventListener("click", () => toggleNav());
+    //const toggleNav = () => {
+     // navbar.classList.toggle("active");
+     // mobileNav.classList.toggle("hamburger-active");
+    //};
+  //mobileNav.addEventListener("click", () => toggleNav());
 
 const elementsToFadeInUpOnScroll = document.querySelectorAll(".fade-in-up-on-scroll");
 if (elementsToFadeInUpOnScroll) {

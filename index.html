@@ -50,6 +50,7 @@
         --heading-font: "Playball", cursive;
         --main-font: "Open Sans", sans-serif;
       }
+    
       @keyframes fade-in {
         0% {
           opacity: 0;
@@ -106,7 +107,7 @@
   justify-content: space-between;
    width: 100%;
   color: var(--secondary-color);
-  position: fixed;
+  position: absolute;
   z-index: 2;
   top: 0;
   background-color: transparent;
@@ -234,7 +235,7 @@ nav.scrolled {
         background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/139/603/original/1-2.jpg?1723820443);
       }
 
-      .parallax:nth-of-type(2) {
+     .parallax ~ .parallax  {
         background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/139/608/original/pexels-asadphoto-1483053_%282%29.jpg?1723822091);
       }
       .container {
@@ -305,7 +306,9 @@ nav.scrolled {
       }
 
   .experiences h3{ 
-    background-color: var(--background-color-2);}
+    background-color: var(--background-color-2);
+    
+  }
 
       .activities-list {
         display: flex;
@@ -348,7 +351,7 @@ font-size: 15px;
     background-color: transparent;
   }
       .gallery-section{
-        background-color: var(--background-color-2);
+  background-color: var(--background-color-2);
       }
       .gallery {
   display: flex;
@@ -408,6 +411,9 @@ font-size: 15px;
       @media only screen and (max-device-width: 1366px) {
   .parallax {
     background-attachment: scroll;
+  }
+  .buffer{
+    display: none;
   }
 }
   @media (max-width: 1200px) {

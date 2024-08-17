@@ -183,14 +183,14 @@ nav.scrolled {
       }
 
       .menubar {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: -60%;
         display: flex;
         justify-content: center;
         align-items: flex-start;
         width: 60%;
-        height: 100vh;
+        height: 200vh;
         padding: 20% 0;
         background: var(--background-color-2);
         transition: all 0.5s ease-in;
@@ -301,6 +301,7 @@ nav.scrolled {
       .experiences {
         font-family: var(--main-font); 
        background-color: rgba(255, 255, 255, 0.9);
+       padding-top: 50px;
       }
 
   .experiences h3{ 
@@ -464,61 +465,7 @@ width: calc(100% - 0px); }
   </head>
   <body>
     <header>
-       <!--<nav
-      class="navbar fixed-top navbar-expand-lg navbar-light"
-      style="background-color: transparent";
-    >
-      <div class="container-fluid">
-        <a class="logo navbar-brand navbar-font fw-bold" href="/" title="Homepage">
-          Maldives <span class="laobrige-font"></span
-        ></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a
-              class="nav-link active navbar-font mx-2"
-              aria-current="page"
-              href="/"
-              title="Home"
-              >Home</a
-            >
-            <a
-              class="nav-link navbar-font mx-2"
-              aria-current="page"
-              href="/work.html"
-              title="work.html"
-              >Work</a
-            >
-            <a
-              class="nav-link navbar-font mx-2"
-              href="/about.html"
-              title="About"
-              >About</a
-            >
-            <a
-              class="nav-link navbar-font mx-2"
-              href="/about.html#contacts"
-              title="Contact"
-              >Contact</a
-            >
-          </div>
-        </div>
-      </div>
-    </nav>
-  -->
-      <nav>
+    <nav>
         <div class="logo">
           <p>Maldives</p>
         </div>

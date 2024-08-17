@@ -309,7 +309,6 @@ nav.scrolled {
     background-color: var(--background-color-2);
     
   }
-
       .activities-list {
         display: flex;
         flex-wrap: wrap;
@@ -409,11 +408,11 @@ font-size: 15px;
         background-color:  #808080;
       }
       @media only screen and (max-device-width: 1366px) {
-  .parallax {
+  .parallax, .parallax ~ .parallax  {
     background-attachment: scroll;
   }
   .buffer{
-    display: none;
+    width: 200px;
   }
 }
   @media (max-width: 1200px) {

@@ -123,6 +123,9 @@ nav.scrolled {
 nav.scrolled .nav-link{
   color: var(--primary-color) !important;
 }
+nav.scrolled .logo{
+   color: var(--primary-color) !important;
+}
   /*nav {
   padding: 5px 70px;
   display: flex;
@@ -329,7 +332,7 @@ nav.scrolled {
 
   .experiences h3{ 
     background-color: var(--background-color-2);
-    
+    padding-bottom: 50px;
   }
       .activities-list {
         display: flex;
@@ -384,7 +387,9 @@ font-size: 15px;
   padding: 0;
   background-color: var(--background-color-2);
 }
-
+.gallery-section h3{
+  padding-bottom: 50px;
+}
 .gallery-item {
   width: calc(25% - 0px); 
   overflow: hidden;
@@ -434,8 +439,11 @@ font-size: 15px;
   .parallax, .parallax ~ .parallax  {
     background-attachment: scroll;
   }
+  .about{
+    background-color: var(--background-color-2);
+  }
   .buffer{
-    width: 200px;
+    display: none;
   }
 }
   @media (max-width: 1200px) {
@@ -613,8 +621,8 @@ width: calc(100% - 0px); }
         </div>
         </div>
         <div class="container mx-0">
-        <div class="experiences">
-          <h3 class="text-uppercase text-center py-5" id="activities">
+        <div class="experiences" id="activities" >
+          <h3 class="text-uppercase text-center">
             Things to do in the Maldives
           </h3>
 
@@ -697,7 +705,7 @@ The Maldives has the largest fleet of seaplanes in the world!
       <div class="container container-2">
         <div class="buffer"></div>
         <div class="gallery-section" id="gallery">
-        <h3 class="text-uppercase text-center py-5 m-0">Get inspired</h3>
+        <h3 class="text-uppercase text-center m-0">Get inspired</h3>
         <div class="gallery fade-in-up-on-scroll" >
           <div class="gallery-item">
             <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/138/665/original/coral.jpg?1723447352" alt="Fish" />

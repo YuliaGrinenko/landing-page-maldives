@@ -101,11 +101,28 @@
         font-family: var(--main-font);
         font-weight: 400;
       }
-
+nav {
+  color: #fff;
+font-size: 24px;
+}
   nav .logo {
-        font-family: var(--heading-font);
-        font-size: 28px;
+    font-family: var(--heading-font);
+    color: #fff;
+    font-size: 24px;
+    margin-left: 20px;
+    font-weight: normal!important;
       }
+  .nav-link {
+color: #fff;
+    font-size: 16px;
+  }
+nav.scrolled {
+  background-color: #fff !important; 
+  padding-bottom: 0px !important;
+}
+nav.scrolled .nav-link{
+  color: var(--primary-color) !important;
+}
   /*nav {
   padding: 5px 70px;
   display: flex;
@@ -356,6 +373,7 @@ font-size: 15px;
   }
       .gallery-section{
   background-color: var(--background-color-2);
+  padding-top: 50px;
       }
       .gallery {
   display: flex;
@@ -480,7 +498,7 @@ width: calc(100% - 0px); }
       style="background-color: transparent"
     >
       <div class="container-fluid">
-        <a class="logo navbar-brand navbar-font fw-bold" href="/" title="Homepage"
+        <a class="logo navbar-brand navbar-font" href="/" title="Homepage"
           >Maldives <span class="laobrige-font"></span
         ></a>
         <button
@@ -500,7 +518,7 @@ width: calc(100% - 0px); }
         >
           <div class="navbar-nav">
             <a
-              class="nav-link active navbar-font mx-2"
+              class="nav-link navbar-font mx-2"
               aria-current="page"
               href="/"
               title="Home"
@@ -511,13 +529,13 @@ width: calc(100% - 0px); }
               aria-current="page"
               href="/#activities"
               title="work.html"
-              >Work</a
+              >Experiences</a
             >
             <a
               class="nav-link navbar-font mx-2"
               href="/#gallery"
               title="About"
-              >About</a
+              >Gallery</a
             >
             <a
               class="nav-link navbar-font mx-2"

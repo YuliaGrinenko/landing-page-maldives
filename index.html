@@ -104,6 +104,7 @@
 nav {
   color: #fff;
 font-size: 24px;
+padding-bottom: 0.5px !important;
 }
   nav .logo {
     font-family: var(--heading-font);
@@ -118,7 +119,6 @@ color: #fff;
   }
 nav.scrolled {
   background-color: #fff !important; 
-  padding-bottom: 0px !important;
 }
 nav.scrolled .nav-link{
   color: var(--primary-color) !important;
@@ -438,6 +438,7 @@ font-size: 15px;
       @media only screen and (max-device-width: 1366px) {
   .parallax, .parallax ~ .parallax  {
     background-attachment: scroll;
+    min-height: 50vh;
   }
   .about{
     background-color: var(--background-color-2);
@@ -461,12 +462,23 @@ font-size: 15px;
         .gallery-item {
     width: calc(50% - 0px); }
   }
-      
+      nav .logo {
+        margin-left: 10px;
+      }
       @media (max-width: 768px) {
 
         .hero h1{
           font-size: 64px;
-        }  
+        } 
+      }
+        @media (max-width: 400px) {
+          .hero button {
+            margin-top: 120px;}
+          .about{
+        font-size: 18px;
+        text-align: left;
+      } }
+          
         /*nav{
           padding: 5px 25px;
         }

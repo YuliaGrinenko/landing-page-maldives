@@ -353,7 +353,7 @@ font-size: 15px;
       }
       .image-container img {
         width: 100%;
-        height: 300px;
+        height: 350px;
         border-radius: 2px;
        transition: all 0.4s ease-in-out;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
@@ -362,7 +362,7 @@ font-size: 15px;
       }
       .image-container img:hover {
         transform: scale(1.2);
-        max-height: 300px;
+        max-height: 350px;
         border-radius: 2px;
       }
       .image-caption h4 {
@@ -463,35 +463,17 @@ font-size: 15px;
     width: calc(50% - 0px); }
   }
       nav .logo {
-        margin-left: 10px;
+        margin-left: 5px;
       }
       @media (max-width: 768px) {
 
         .hero h1{
           font-size: 64px;
-        } 
-      }
-        @media (max-width: 400px) {
-          .hero button {
-            margin-top: 120px;}
-          .about{
-        font-size: 18px;
-        text-align: left;
-      } }
-          
-        /*nav{
-          padding: 5px 25px;
-        }
-        .hamburger {
-          display: block;
-        }
-        nav ul {
-          display: none;
-        }*/
+        }  
 
         .activities-list{
-padding: 0 20px;
           justify-content: center;
+          padding: 0 10px;
           
         }
         .activity-item {
@@ -512,7 +494,7 @@ width: calc(100% - 0px); }
 </style>
   </head>
   <body>
-    <header>
+    <header id="home">
       <nav
       class="navbar fixed-top navbar-expand-lg navbar-light"
       style="background-color: transparent"
@@ -540,7 +522,7 @@ width: calc(100% - 0px); }
             <a
               class="nav-link navbar-font mx-2"
               aria-current="page"
-              href="/"
+              href="/#home"
               title="Home"
               >Home</a
             >
@@ -567,50 +549,10 @@ width: calc(100% - 0px); }
         </div>
       </div>
     </nav>
-    <!--<nav>
-        <div class="logo">
-          <p>Maldives</p>
-        </div>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/index.html#activities">Activities</a>
-          </li>
-          <li>
-            <a href="/index.html#gallery">Gallery</a>
-          </li>
-          <li>
-            <a href="/index.html#contacts">Contacts</a>
-          </li>
-        </ul>
-        <div class="hamburger">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </div>
-      </nav>
-      <div class="menubar">
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/#activities">Activities</a>
-          </li>
-          <li>
-            <a href="/#gallery">Gallery</a>
-          </li>
-          <li>
-            <a href="/#contacts">Contact</a>
-          </li>
-        </ul>
-      </div>-->
     </header>
     <div class="parallax">
       <div class="container mx-0">
-        <div class="hero" id="hero">
+        <div class="hero">
           <h2 class="fade-in-element">Discover</h2>
           <h1 class="fade-in-element">Maldives</h1>
           <h3 class="fade-in-element">

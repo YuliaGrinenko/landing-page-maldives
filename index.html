@@ -104,7 +104,7 @@
 nav {
   color: #fff;
 font-size: 24px;
-padding-bottom: 0.5px !important;
+padding-bottom: 1px !important;
 }
   nav .logo {
     font-family: var(--heading-font);
@@ -117,6 +117,14 @@ padding-bottom: 0.5px !important;
 color: #fff;
     font-size: 16px;
   }
+  .navbar-toggler-icon{
+  filter: brightness(0) invert(1);
+}
+.navbar-toggler-icon:focus,
+.navbar-toggler-icon:hover {
+  background-color: transparent;
+}
+
 nav.scrolled {
   background-color: #fff !important; 
 }
@@ -126,6 +134,10 @@ nav.scrolled .nav-link{
 nav.scrolled .logo{
    color: var(--primary-color) !important;
 }
+nav.scrolled .navbar-toggler-icon {
+filter: none;
+}
+
   /* 
 
       .hamburger {
@@ -402,6 +414,7 @@ font-size: 15px;
     
         .about {
           padding: 30px;
+          text-align: left;
         }
 }
 @media (max-width: 576px) {

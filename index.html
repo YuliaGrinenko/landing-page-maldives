@@ -86,7 +86,6 @@
       .fade-in-element:nth-child(4) {
         animation-delay: 2s;
       }
-
       @keyframes fadeInUp {
         from {
           transform: translateY(50px);
@@ -97,8 +96,18 @@
           opacity: 1;
         }
       }
+
+      .fade-in-up-on-scroll {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+      }
+
       .fade-in-up {
-        animation: 0.75s both fadeInUp;
+        animation: 1.75s both fadeInUp;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s ease-out;
       }
       body {
         margin: 0;
@@ -680,7 +689,7 @@
     if (elementsToFadeInUpOnScroll) {
       window.addEventListener("scroll", function (event) {
         elementsToFadeInUpOnScroll.forEach(function (element) {
-          if (window.scrollY >= element.offsetTop - window.innerHeight) {
+          if (window.scrollY >= element.offsetTop - window.innerHeight + 200) {
             element.classList.add("fade-in-up");
           } else {
             element.classList.remove("fade-in-up");
@@ -689,7 +698,7 @@
       });
     }
     window.addEventListener("scroll", function () {
-      var nav = document.querySelector("nav");
+      const nav = document.querySelector("nav");
       if (window.scrollY > 0) {
         nav.classList.add("scrolled");
       } else {
